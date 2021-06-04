@@ -40,11 +40,6 @@
         echo "<li>" . $match['home'] . " - " . $match['away'] . " | " . $match['homePoints'] . "-" . $match['awayPoints'] . "</li>";
     }
     
-  ?>
-
-  
-
-
-
+  ?> 
 </body>
 </html>
