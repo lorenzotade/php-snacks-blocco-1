@@ -11,28 +11,28 @@
 
     $posts = [
       '10/01/2021' => [
-        'title' => 'Compleanno mamma',
+        ['title' => 'Compleanno mamma',
         'author' => 'Lorenzo Tadè',
-        'text' => 'Tanti auguri mamma'
+        'text' => 'Tanti auguri mamma']
       ],
       '21/03/2021' => [
-        'title' => 'Compleanno fratello',
+        ['title' => 'Compleanno fratello',
         'author' => 'Lorenzo Tadè',
-        'text' => 'Tanti auguri fratello'
+        'text' => 'Tanti auguri fratello']
       ],
       '17/04/2021' => [
-        'title' => 'Compleanno mio',
+        ['title' => 'Compleanno mio',
         'author' => 'Lorenzo Tadè',
-        'text' => 'Tanti auguri me stesso'
+        'text' => 'Tanti auguri me stesso']
       ],
       '03/10/2021' => [
-        'title' => 'Compleanno papà',
+        ['title' => 'Compleanno papà',
         'author' => 'Lorenzo Tadè',
-        'text' => 'Tanti auguri papà'
+        'text' => 'Tanti auguri papà']
       ],
     ];
 
-    foreach ($posts as $post => $value) {
+    /* foreach ($posts as $post => $value) {
       echo "<ul>
               <li>" . $post . 
                 "<ul>
@@ -42,6 +42,15 @@
                  </ul>
               </li>
             </ul>";
+    } */
+
+    foreach($posts as $key => $post){
+      foreach($post as $msg){
+        echo $key . "<br>"; 
+        echo $msg['title'] . "<br>";
+        echo $msg['author'] . "<br>";
+        echo $msg['text'] . "<br><br>";
+      }
     }
     
   ?>
